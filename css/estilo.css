@@ -189,6 +189,7 @@ h2 { font-size: clamp(1.9rem, 3.6vw, 2.8rem); text-transform: uppercase; }
 .equip-texto h2 { color: #fff; margin-bottom: 16px; }
 .equip-descricao { color: rgba(255,255,255,.82); }
 .equip-destaques { display: grid; grid-template-columns: repeat(2,1fr); gap: 18px; }
+.equip-destaques > :last-child:nth-child(odd) { grid-column: 1 / -1; }
 .equip-item {
   background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.12);
   border-radius: 6px; padding: 22px;

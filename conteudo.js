@@ -99,11 +99,6 @@ window.CONTEUDO = {
         descricao: "Estaca moldada no solo, escavada com trado helicoidal por perfuratrizes sobre caminhão ou sobre esteira (top drive) e concretada a partir da superfície. Diâmetros de Ø250 a Ø1600 mm, até 25 m.",
       },
       {
-        icone: "parede",
-        nome: "Estacas Cravadas Pré-moldadas",
-        descricao: "Cravação de estacas de concreto pré-moldado por martelo hidráulico, com produtividade maior que a dos bate-estacas convencionais.",
-      },
-      {
         icone: "terra",
         nome: "Locação de Bombas de Concreto",
         descricao: "Bombas estacionárias Putzmeister e Schwing, de 57 a 90 m³/h, para obras e empresas.",
@@ -126,7 +121,6 @@ window.CONTEUDO = {
       { titulo: "Perfuratrizes de estaca raiz", texto: "Soilmec SM14 e SM22, CZM ER190R e MC140 e CMV M20-10, de Ø250 a Ø500 mm, inclusive em áreas restritas." },
       { titulo: "Cabeçote duplo para secantes", texto: "CZM EM1000/32 sobre Caterpillar 336, em Ø420, Ø520 e Ø620 mm, até 19 m." },
       { titulo: "Trado mecanizado", texto: "Perfuratrizes sobre caminhão e sobre esteira, de Ø250 a Ø1600 mm, até 25 m de profundidade." },
-      { titulo: "Cravação", texto: "Martelo hidráulico CZM EM 5000HH sobre Caterpillar 320D." },
       { titulo: "Equipamentos para locação", texto: "Bombas de concreto Putzmeister e Schwing (57 a 90 m³/h), compressores de ar e grupos geradores industriais." },
     ],
   },
@@ -390,7 +384,6 @@ window.CONTEUDO = {
       "Estaca Raiz",
       "Estaca Secante / Parede Diafragma",
       "Trado Mecanizado",
-      "Estaca Pré-moldada",
       "Locação de Bomba de Concreto",
       "Locação de Compressor ou Gerador",
       "Ainda não sei / preciso de orientação",
