@@ -186,8 +186,8 @@ window.CONTEUDO = {
     chamada: "Estamos prontos para atender sua obra",
     endereco: "Avenida Hematita, 562 — Distrito Industrial, Itabira/MG — CEP 35903-051",
     telefone: "(31) 3833-4100",
-    celular: "(31) 97155-1620",
-    whatsapp: "5531971551620",            // só números, com 55 na frente
+    celular: "(31) 9963-7452",
+    whatsapp: "553199637452",             // só números, com 55 na frente
     email: "orcamento@cglfundacoes.com.br",
     horario: "Segunda a sexta, 8h às 18h",
     // Link do mapa: abra o Google Maps no endereço e cole o link "Incorporar mapa".
