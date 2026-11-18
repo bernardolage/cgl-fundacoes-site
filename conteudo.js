@@ -86,7 +86,7 @@ window.CONTEUDO = {
       {
         icone: "raiz",
         nome: "Estaca Raiz",
-        descricao: "Alto atrito lateral e equipamentos de pequeno porte para áreas restritas. Sem vibração nem descompressão do terreno, atravessa matacões, rocha e concreto. Diâmetros Ø250, Ø310 e Ø410 mm.",
+        descricao: "Alto atrito lateral, com perfuratrizes compactas para áreas restritas e de médio porte para maior produção. Sem vibração nem descompressão do terreno, atravessa matacões, rocha e concreto. Diâmetros de Ø250 a Ø500 mm.",
       },
       {
         icone: "secante",
@@ -123,7 +123,7 @@ window.CONTEUDO = {
     texto: "A CGL Fundações dispõe de uma frota própria e diversificada de perfuratrizes e equipamentos de apoio, o que garante disponibilidade, agilidade e previsibilidade de prazo nas obras.",
     destaques: [
       { titulo: "Perfuratrizes de hélice contínua", texto: "CZM EM800 e EM800 Super sobre chassis Caterpillar, até 30 m de profundidade." },
-      { titulo: "Perfuratrizes de estaca raiz", texto: "CZM CR14, CZM MC140 e CMV M20-10 sobre esteira, em Ø250, Ø310 e Ø410 mm." },
+      { titulo: "Perfuratrizes de estaca raiz", texto: "Soilmec SM14 e SM22, CZM ER190R e MC140 e CMV M20-10, de Ø250 a Ø500 mm, inclusive em áreas restritas." },
       { titulo: "Cabeçote duplo para secantes", texto: "CZM EM1000/32 sobre Caterpillar 336, em Ø420, Ø520 e Ø620 mm, até 19 m." },
       { titulo: "Trado mecanizado", texto: "Perfuratrizes sobre caminhão e sobre esteira, de Ø250 a Ø1600 mm, até 25 m de profundidade." },
       { titulo: "Cravação", texto: "Martelo hidráulico CZM EM 5000HH sobre Caterpillar 320D." },
@@ -140,7 +140,7 @@ window.CONTEUDO = {
     texto: "Perfuratrizes com monitoramento digital da execução e equipamentos de porte industrial para locação.",
     grupos: [
       {
-        titulo: "Perfuratrizes",
+        titulo: "Perfuratrizes de escavada e hélice contínua",
         itens: [
           {
             tag: "CGL-65 · CGL-88",
@@ -197,7 +197,7 @@ window.CONTEUDO = {
           },
           {
             tag: "CGL-66",
-            nome: "Hélice contínua de grande porte",
+            nome: "Hélice contínua de médio porte",
             imagem: "imagens/equip-cgl-66.jpg",
             descricao: "Perfuratriz top drive com torre pantografada, alto torque e grande força de extração para estacas profundas.",
             principais: [
@@ -225,10 +225,82 @@ window.CONTEUDO = {
         ],
       },
       {
+        titulo: "Perfuratrizes de estaca raiz",
+        itens: [
+          {
+            tag: "Pequeno porte",
+            nome: "Soilmec SM14",
+            imagem: "imagens/equip-soilmec-sm14.jpg",
+            descricao: "Perfuratriz compacta sobre esteiras para estaca raiz e tirantes em áreas restritas, com mastro que gira em quatro posições de 90°.",
+            principais: [
+              ["Torque da cabeça", "até 13,5 kN·m"],
+              ["Força de tração", "89 kN"],
+              ["Curso do mastro", "4 m"],
+              ["Potência", "165 HP"],
+              ["Peso", "14,3 t"],
+            ],
+            ficha: [
+              ["Força de impulso", "45 kN"],
+              ["Velocidade de avanço", "até 28 m/min"],
+              ["Extrator", "100 kN; curso de 400 mm"],
+              ["Morsas", "passagem de 50 a 415 mm"],
+              ["Torque de desrosqueamento", "5.060 daN·m"],
+              ["Extensão do mastro", "1.000 mm"],
+              ["Velocidade de translação", "2,7 km/h"],
+              ["Oscilação das esteiras", "±10°"],
+            ],
+          },
+          {
+            tag: "Médio porte",
+            nome: "Soilmec SM22",
+            imagem: "",
+            descricao: "Perfuratriz sobre esteiras para estaca raiz e microestacas com alta produção, com antena de 7,2 m ou 10,2 m de curso.",
+            principais: [
+              ["Força de tração e impulso", "148 kN"],
+              ["Curso da antena", "7,2 m ou 10,2 m"],
+              ["Potência", "260 HP"],
+              ["Peso", "23,3 t"],
+            ],
+            ficha: [
+              ["Velocidade de subida", "até 28 m/min"],
+              ["Pressão no solo", "0,084 MPa"],
+              ["Largura do patim", "500 mm"],
+              ["Comprimento das esteiras", "2.910 mm"],
+              ["Rampa máxima", "66%"],
+            ],
+          },
+          {
+            tag: "Médio porte",
+            nome: "CZM ER190R",
+            imagem: "imagens/equip-czm-er190r.jpg",
+            descricao: "Perfuratriz de estaca raiz montada sobre escavadeira Caterpillar 313D2L, com morsa dupla e deslocamento lateral da cabeça.",
+            principais: [
+              ["Torque da caixa rotativa", "2.770 kgf·m"],
+              ["Pulldown e extração", "14.000 kgf"],
+              ["Altura de operação", "9,2 m (11,2 m com extensão)"],
+              ["Potência", "100 HP"],
+              ["Peso de operação", "20,5 t"],
+            ],
+            ficha: [
+              ["Rotação", "43 rpm na 1ª marcha; 86 rpm na 2ª"],
+              ["Morsa", "tubos de 88,9 a 457,2 mm; quebra de 6.540 kgf·m"],
+              ["Deslocamento lateral da cabeça", "697 mm"],
+              ["Curso do carro guia", "6.500 mm com extensão; 4.525 mm sem"],
+              ["Inclinação da torre", "8° frontal, 12° lateral"],
+              ["Guincho auxiliar", "3.000 kgf"],
+              ["Sistema hidráulico", "350 bar; 254 L/min"],
+              ["Pressão no solo", "0,44 kgf/cm²"],
+              ["Tanque de combustível", "250 L"],
+              ["Transporte", "3,94 m de altura × 11,00 m × 2,76 m"],
+            ],
+          },
+        ],
+      },
+      {
         titulo: "Locação: compressores e geradores",
         itens: [
           {
-            tag: "3 unidades",
+            tag: "Locação",
             nome: "Compressor Atlas Copco X1200",
             imagem: "imagens/equip-compressor-x1200.jpg",
             descricao: "Compressor de ar diesel de alta vazão e alta pressão, para perfuração e serviços industriais.",
@@ -240,7 +312,7 @@ window.CONTEUDO = {
             ficha: [],
           },
           {
-            tag: "1 unidade",
+            tag: "Locação",
             nome: "Compressor Atlas Copco XRV 1000",
             imagem: "imagens/equip-compressor-xrv1000.jpg",
             descricao: "Compressor de ar diesel de alta pressão para obras e mineração.",
@@ -253,7 +325,7 @@ window.CONTEUDO = {
             ficha: [],
           },
           {
-            tag: "4 unidades",
+            tag: "Locação",
             nome: "Gerador Atlas Copco QAS 105",
             imagem: "imagens/equip-gerador-qas105.jpg",
             descricao: "Grupo gerador diesel silenciado, com chassi vedado para contenção de fluidos.",

@@ -120,7 +120,10 @@
       var grade = el("div", "frota-grade");
       g.itens.forEach(function (it) {
         grade.appendChild(el("article", "frota-card",
-          '<div class="frota-foto"><img src="' + it.imagem + '" alt="' + it.nome + ' da CGL Fundações" loading="lazy" />' +
+          '<div class="frota-foto' + (it.imagem ? '' : ' frota-foto-vazia') + '">' +
+          (it.imagem
+            ? '<img src="' + it.imagem + '" alt="' + it.nome + ' da CGL Fundações" loading="lazy" />'
+            : '<img src="imagens/logo-cgl-branco.png" alt="" loading="lazy" />') +
           '<span class="frota-tag">' + it.tag + '</span></div>' +
           '<div class="frota-corpo"><h4>' + it.nome + '</h4><p>' + it.descricao + '</p>' +
           '<dl class="frota-specs">' + linhas(it.principais) + '</dl>' +
