@@ -21,6 +21,8 @@ window.CONTEUDO = {
     nome: "CGL Fundações",
     desde: "1997",
     slogan: "Fundações profundas e contenções desde 1997",
+    certificacao: "Empresa certificada ISO 9001",
+    certificacaoTexto: "Sistema de gestão da qualidade certificado, do orçamento à execução da obra.",
   },
 
   /* ---------- MENU (ordem dos links) ---------- */
@@ -71,7 +73,7 @@ window.CONTEUDO = {
   },
 
   /* ---------- SEÇÃO SERVIÇOS ----------
-     icone: escolha entre  estaca | raiz | secante | parede | sondagem | terra | consultoria  */
+     icone: escolha entre  estaca | raiz | secante | parede | sondagem | terra | energia | consultoria  */
   servicos: {
     titulo: "Nossos serviços",
     chamada: "Soluções completas em fundações e contenções",
@@ -94,17 +96,22 @@ window.CONTEUDO = {
       {
         icone: "sondagem",
         nome: "Escavadas com Trado Mecanizado",
-        descricao: "Estaca moldada no solo, escavada com trado helicoidal acionado por perfuratriz montada sobre caminhão e concretada a partir da superfície. Diâmetros de Ø250 a Ø1500 mm.",
+        descricao: "Estaca moldada no solo, escavada com trado helicoidal por perfuratrizes sobre caminhão ou sobre esteira (top drive) e concretada a partir da superfície. Diâmetros de Ø250 a Ø1600 mm, até 25 m.",
       },
       {
         icone: "parede",
-        nome: "Estacas Cravadas Pré-moldadas e Metálicas",
-        descricao: "Cravação por martelo hidráulico de estacas de concreto pré-moldado e perfis metálicos, com produtividade maior que a dos bate-estacas convencionais.",
+        nome: "Estacas Cravadas Pré-moldadas",
+        descricao: "Cravação de estacas de concreto pré-moldado por martelo hidráulico, com produtividade maior que a dos bate-estacas convencionais.",
       },
       {
         icone: "terra",
         nome: "Locação de Bombas de Concreto",
         descricao: "Bombas estacionárias Putzmeister e Schwing, de 57 a 90 m³/h, para obras e empresas.",
+      },
+      {
+        icone: "energia",
+        nome: "Locação de Compressores e Geradores",
+        descricao: "Ar comprimido e energia para a sua operação não parar. Compressores e grupos geradores de porte industrial, para obras, mineração e indústria.",
       },
     ],
   },
@@ -118,9 +125,147 @@ window.CONTEUDO = {
       { titulo: "Perfuratrizes de hélice contínua", texto: "CZM EM800 e EM800 Super sobre chassis Caterpillar, até 30 m de profundidade." },
       { titulo: "Perfuratrizes de estaca raiz", texto: "CZM CR14, CZM MC140 e CMV M20-10 sobre esteira, em Ø250, Ø310 e Ø410 mm." },
       { titulo: "Cabeçote duplo para secantes", texto: "CZM EM1000/32 sobre Caterpillar 336, em Ø420, Ø520 e Ø620 mm, até 19 m." },
-      { titulo: "Caminhões perfuratriz", texto: "Trado mecanizado de Ø250 a Ø1500 mm, até 25 m de profundidade." },
+      { titulo: "Trado mecanizado", texto: "Perfuratrizes sobre caminhão e sobre esteira, de Ø250 a Ø1600 mm, até 25 m de profundidade." },
       { titulo: "Cravação", texto: "Martelo hidráulico CZM EM 5000HH sobre Caterpillar 320D." },
-      { titulo: "Bombas de concreto", texto: "Putzmeister TK70 e Schwing SP2000, de 57 a 90 m³/h." },
+      { titulo: "Equipamentos para locação", texto: "Bombas de concreto Putzmeister e Schwing (57 a 90 m³/h), compressores de ar e grupos geradores industriais." },
+    ],
+  },
+
+  /* ---------- SEÇÃO NOSSA FROTA (fichas técnicas) ----------
+     Perfuratrizes: só a TAG da CGL, nunca o modelo do fabricante (decisão do Bernardo, 18/11/2026).
+     principais = linhas sempre visíveis; ficha = linhas do "Ver ficha técnica completa". */
+  frota: {
+    titulo: "Nossa frota",
+    chamada: "Equipamentos próprios, com ficha técnica",
+    texto: "Perfuratrizes com monitoramento digital da execução e equipamentos de porte industrial para locação.",
+    grupos: [
+      {
+        titulo: "Perfuratrizes",
+        itens: [
+          {
+            tag: "CGL-65 · CGL-88",
+            nome: "Trado mecanizado sobre esteira",
+            imagem: "imagens/equip-cgl-65-88.jpg",
+            descricao: "Perfuratriz de estaca escavada com sistema top drive, compacta e de baixo consumo. Transporte sem desmontagem completa.",
+            principais: [
+              ["Diâmetro", "350 a 1.200 mm"],
+              ["Profundidade", "até 18 m"],
+              ["Torque máximo", "8.160 kgf·m"],
+              ["Potência", "74 HP"],
+              ["Peso de operação", "18 t"],
+            ],
+            ficha: [
+              ["Rotação", "12 rpm no torque máximo; 45 rpm na 2ª velocidade"],
+              ["Força de extração", "24.470 kgf"],
+              ["Pressão no solo", "0,71 kgf/cm²"],
+              ["Tanque de combustível", "175 L"],
+              ["Inclinação da torre", "5° frontal, 4° lateral, 5° para trás"],
+              ["Sistema hidráulico", "320 bar; 448 L/min"],
+              ["Guincho principal", "12.230 kgf; 45 m/min; cabo de 19 mm"],
+              ["Guincho auxiliar", "1.325 kgf; cabo de 13 mm"],
+              ["Largura das esteiras", "2.200 mm recolhida; 3.100 mm em operação"],
+              ["Transporte", "3,10 m de altura × 8,30 m × 2,20 m; 16 t"],
+              ["Monitoramento", "Geodigitus: profundidade, inclinação da torre e rotação"],
+            ],
+          },
+          {
+            tag: "CGL-67 · CGL-68",
+            nome: "Estaca escavada e hélice contínua",
+            imagem: "imagens/equip-cgl-67-68.jpg",
+            descricao: "Perfuratriz top drive com torre pantografada, que executa estaca escavada de grande diâmetro e hélice contínua.",
+            principais: [
+              ["Escavada", "450 a 1.600 mm, até 25 m"],
+              ["Hélice contínua", "300 a 600 mm, até 16 m"],
+              ["Torque máximo", "10.200 kgf·m"],
+              ["Potência", "210 HP"],
+              ["Peso de operação", "25 t"],
+            ],
+            ficha: [
+              ["Hélice sem prolonga", "12 m (prolonga de 4 m)"],
+              ["Rotação", "14 rpm no torque máximo; 24 rpm na 2ª velocidade"],
+              ["Força de extração", "30.580 kgf"],
+              ["Pressão no solo", "0,55 kgf/cm²"],
+              ["Tanque de combustível", "250 L"],
+              ["Inclinação da torre", "5° frontal, 4° lateral, 5° para trás"],
+              ["Sistema hidráulico", "320 bar; 448 L/min"],
+              ["Guincho principal", "15.290 kgf; 50 m/min; cabo de 19 mm"],
+              ["Guincho auxiliar", "1.530 kgf; cabo de 13 mm"],
+              ["Largura das esteiras", "3.000 mm recolhida; 4.200 mm em operação"],
+              ["Transporte", "3,40 m de altura × 11,50 m × 2,80 m; 20 t"],
+              ["Monitoramento", "Geodigitus: torque, força nos guinchos e rotação"],
+            ],
+          },
+          {
+            tag: "CGL-66",
+            nome: "Hélice contínua de grande porte",
+            imagem: "imagens/equip-cgl-66.jpg",
+            descricao: "Perfuratriz top drive com torre pantografada, alto torque e grande força de extração para estacas profundas.",
+            principais: [
+              ["Diâmetro", "até 700 mm"],
+              ["Profundidade", "até 25 m"],
+              ["Torque máximo", "17.340 kgf·m"],
+              ["Potência", "260 HP"],
+              ["Peso de operação", "40 t"],
+            ],
+            ficha: [
+              ["Profundidade sem prolonga", "19 m (prolonga de 6 m)"],
+              ["Rotação", "14 rpm no torque máximo; 24 rpm na 2ª velocidade"],
+              ["Força de extração", "81.560 kgf"],
+              ["Pressão no solo", "0,75 kgf/cm²"],
+              ["Tanque de combustível", "370 L"],
+              ["Inclinação da torre", "5° frontal, 3° a 5° lateral, 5° para trás"],
+              ["Sistema hidráulico", "300 bar; 500 L/min"],
+              ["Guincho principal", "20.390 kgf; 65 m/min; cabo de 19 mm"],
+              ["Guincho auxiliar", "5.100 kgf; cabo de 13 mm"],
+              ["Largura das esteiras", "3.000 mm recolhida; 4.200 mm em operação"],
+              ["Transporte", "3,40 m de altura × 13,85 m × 3,00 m; 40 t"],
+              ["Monitoramento", "Geodigitus: torque, força nos guinchos e rotação"],
+            ],
+          },
+        ],
+      },
+      {
+        titulo: "Locação: compressores e geradores",
+        itens: [
+          {
+            tag: "3 unidades",
+            nome: "Compressor Atlas Copco X1200",
+            imagem: "imagens/equip-compressor-x1200.jpg",
+            descricao: "Compressor de ar diesel de alta vazão e alta pressão, para perfuração e serviços industriais.",
+            principais: [
+              ["Vazão", "até 1.200 pcm (567 L/s)"],
+              ["Pressão de trabalho", "até 30 bar"],
+              ["Motor", "diesel Scania, 6 cilindros"],
+            ],
+            ficha: [],
+          },
+          {
+            tag: "1 unidade",
+            nome: "Compressor Atlas Copco XRV 1000",
+            imagem: "imagens/equip-compressor-xrv1000.jpg",
+            descricao: "Compressor de ar diesel de alta pressão para obras e mineração.",
+            principais: [
+              ["Pressão máxima de trabalho", "25 bar"],
+              ["Tanque de combustível", "565 L"],
+              ["Inclinação de trabalho", "até 15°"],
+              ["Peso", "5.270 kg"],
+            ],
+            ficha: [],
+          },
+          {
+            tag: "4 unidades",
+            nome: "Gerador Atlas Copco QAS 105",
+            imagem: "imagens/equip-gerador-qas105.jpg",
+            descricao: "Grupo gerador diesel silenciado, com chassi vedado para contenção de fluidos.",
+            principais: [
+              ["Potência", "95 kVA contínua; 105 kVA em emergência"],
+              ["Tensão e frequência", "220 V trifásico, 60 Hz"],
+              ["Motor", "diesel Perkins"],
+            ],
+            ficha: [],
+          },
+        ],
+      },
     ],
   },
 
@@ -173,8 +318,9 @@ window.CONTEUDO = {
       "Estaca Raiz",
       "Estaca Secante / Parede Diafragma",
       "Trado Mecanizado",
-      "Estaca Pré-moldada ou Metálica",
+      "Estaca Pré-moldada",
       "Locação de Bomba de Concreto",
+      "Locação de Compressor ou Gerador",
       "Ainda não sei / preciso de orientação",
     ],
     mensagemSucesso: "Recebemos sua solicitação! Nossa equipe comercial entrará em contato em breve.",

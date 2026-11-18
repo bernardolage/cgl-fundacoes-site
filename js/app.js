@@ -22,10 +22,11 @@
     parede:      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16"/><path d="M3 10h18M3 16h18M9 4v6M15 10v6M9 16v4"/></svg>',
     sondagem:    '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v13M9 15h6l-3 7-3-7zM7 6h10M8 10h8"/></svg>',
     terra:       '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 20h20M4 20l4-8 5 4 4-7 5 11"/></svg>',
+    energia:     '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg>',
     consultoria: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v12H8l-4 4z"/><path d="M8 9h8M8 12h5"/></svg>'
   };
 
-  $("logo").innerHTML = "CGL <b>&middot;</b><small>Fundações</small>";
+  $("logo").innerHTML = '<img src="imagens/logo-cgl-branco.png" alt="CGL Fundações" width="64" height="64" />';
   var nav = $("nav");
   C.menu.forEach(function (m) {
     var a = el("a", null, m.texto);
@@ -74,6 +75,12 @@
   $("sobre-titulo").textContent = C.sobre.titulo;
   var sp = $("sobre-paragrafos");
   C.sobre.paragrafos.forEach(function (p) { sp.appendChild(el("p", null, p)); });
+  if (C.empresa.certificacao) {
+    var selo = el("div", "selo-iso",
+      '<img src="imagens/selo-iso9001.png" alt="Selo ISO 9001" width="56" height="56" loading="lazy" />' +
+      "<div><strong>" + C.empresa.certificacao + "</strong><span>" + C.empresa.certificacaoTexto + "</span></div>");
+    $("sobre-paragrafos").after(selo);
+  }
   var sv = $("sobre-valores");
   C.sobre.valores.forEach(function (v) {
     sv.appendChild(el("div", "valor-item",
@@ -99,6 +106,33 @@
     ed.appendChild(el("div", "equip-item",
       "<h3>" + d.titulo + "</h3><p>" + d.texto + "</p>"));
   });
+
+  if (C.frota) {
+    $("frota-tag").textContent = C.frota.chamada;
+    $("frota-titulo").textContent = C.frota.titulo;
+    $("frota-texto").textContent = C.frota.texto;
+    var linhas = function (l) {
+      return l.map(function (r) { return "<div><dt>" + r[0] + "</dt><dd>" + r[1] + "</dd></div>"; }).join("");
+    };
+    var fg = $("frota-grupos");
+    C.frota.grupos.forEach(function (g) {
+      var grupo = el("div", "frota-grupo", '<h3 class="frota-grupo-titulo">' + g.titulo + '</h3>');
+      var grade = el("div", "frota-grade");
+      g.itens.forEach(function (it) {
+        grade.appendChild(el("article", "frota-card",
+          '<div class="frota-foto"><img src="' + it.imagem + '" alt="' + it.nome + ' da CGL Fundações" loading="lazy" />' +
+          '<span class="frota-tag">' + it.tag + '</span></div>' +
+          '<div class="frota-corpo"><h4>' + it.nome + '</h4><p>' + it.descricao + '</p>' +
+          '<dl class="frota-specs">' + linhas(it.principais) + '</dl>' +
+          (it.ficha && it.ficha.length
+            ? '<details class="frota-ficha"><summary>Ver ficha técnica completa</summary><dl class="frota-specs">' + linhas(it.ficha) + '</dl></details>'
+            : '') +
+          '</div>'));
+      });
+      grupo.appendChild(grade);
+      fg.appendChild(grupo);
+    });
+  }
 
   $("obras-tag").textContent = C.obras.chamada;
   $("obras-titulo").textContent = C.obras.titulo;
@@ -152,7 +186,9 @@
     'referrerpolicy="no-referrer-when-downgrade" title="Mapa CGL Fundações"></iframe>';
 
   $("rodape-interno").innerHTML =
-    "<span>" + C.rodape.texto + "</span>" +
+    '<span class="rodape-marca"><img src="imagens/logo-cgl-branco.png" alt="CGL Fundações" width="72" height="72" loading="lazy" />' +
+    (C.empresa.certificacao ? '<img class="rodape-selo" src="imagens/selo-iso9001.png" alt="Selo ISO 9001" width="56" height="56" loading="lazy" />' : "") +
+    "<span>" + C.rodape.texto + "</span></span>" +
     "<span>" + C.rodape.cnpj + "</span>" +
     (C.sistema ? '<a class="rodape-sistema" href="' + C.sistema.url + '" rel="noopener">' + C.sistema.texto + "</a>" : "");
 

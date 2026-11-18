@@ -4,8 +4,8 @@
   "description": "Engenharia de fundações desde 1997 — Itabira/MG.",
   "start_url": "./index.html",
   "display": "standalone",
-  "background_color": "#14233B",
-  "theme_color": "#14233B",
+  "background_color": "#1B3F42",
+  "theme_color": "#1B3F42",
   "lang": "pt-BR",
   "icons": [
     { "src": "imagens/icone-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
