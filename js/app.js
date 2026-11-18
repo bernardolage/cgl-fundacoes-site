@@ -33,10 +33,10 @@
     a.dataset.id = m.id;
     nav.appendChild(a);
   });
-  if (C.sistema) {
-    var aSis = el("a", "nav-sistema", C.sistema.texto);
-    aSis.href = C.sistema.url;
-    aSis.rel = "noopener";
+  // O link do sistema já vem no index.html (funciona sem JavaScript); aqui só vai para o fim do menu.
+  var aSis = $("nav-sistema");
+  if (aSis) {
+    if (C.sistema) { aSis.textContent = C.sistema.texto; aSis.href = C.sistema.url; }
     nav.appendChild(aSis);
   }
   var toggle = $("menu-toggle");
