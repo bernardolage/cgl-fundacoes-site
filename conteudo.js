@@ -86,7 +86,7 @@ window.CONTEUDO = {
       {
         icone: "raiz",
         nome: "Estaca Raiz",
-        descricao: "Alto atrito lateral, com perfuratrizes compactas para áreas restritas e de médio porte para maior produção. Sem vibração nem descompressão do terreno, atravessa matacões, rocha e concreto. Diâmetros de Ø250 a Ø500 mm.",
+        descricao: "Alto atrito lateral, com perfuratrizes para áreas restritas e para obras de maior produção. Sem vibração nem descompressão do terreno, atravessa matacões, rocha e concreto. Diâmetros de Ø250 a Ø500 mm.",
       },
       {
         icone: "secante",
@@ -228,7 +228,7 @@ window.CONTEUDO = {
         titulo: "Perfuratrizes de estaca raiz",
         itens: [
           {
-            tag: "Pequeno porte",
+            tag: "Estaca raiz",
             nome: "Soilmec SM14",
             imagem: "imagens/equip-soilmec-sm14.jpg",
             descricao: "Perfuratriz compacta sobre esteiras para estaca raiz e tirantes em áreas restritas, com mastro que gira em quatro posições de 90°.",
@@ -251,7 +251,7 @@ window.CONTEUDO = {
             ],
           },
           {
-            tag: "Médio porte",
+            tag: "Estaca raiz",
             nome: "Soilmec SM22",
             imagem: "",
             descricao: "Perfuratriz sobre esteiras para estaca raiz e microestacas com alta produção, com antena de 7,2 m ou 10,2 m de curso.",
@@ -270,7 +270,7 @@ window.CONTEUDO = {
             ],
           },
           {
-            tag: "Médio porte",
+            tag: "Estaca raiz",
             nome: "CZM ER190R",
             imagem: "imagens/equip-czm-er190r.jpg",
             descricao: "Perfuratriz de estaca raiz montada sobre escavadeira Caterpillar 313D2L, com morsa dupla e deslocamento lateral da cabeça.",
