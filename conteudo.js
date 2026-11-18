@@ -247,7 +247,7 @@ window.CONTEUDO = {
           {
             tag: "Estaca raiz",
             nome: "Soilmec SM22",
-            imagem: "",
+            imagem: "imagens/equip-soilmec-sm22.jpg",
             descricao: "Perfuratriz sobre esteiras para estaca raiz e microestacas com alta produção, com antena de 7,2 m ou 10,2 m de curso.",
             principais: [
               ["Força de tração e impulso", "148 kN"],
