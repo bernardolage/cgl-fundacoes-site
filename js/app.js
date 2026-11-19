@@ -152,11 +152,6 @@
   $("orc-tag").textContent = C.orcamento.chamada;
   $("orc-titulo").textContent = C.orcamento.titulo;
   $("orc-texto").textContent = C.orcamento.texto;
-  var sel = $("f-servico");
-  sel.appendChild(el("option", null, "Selecione..."));
-  C.orcamento.servicosDisponiveis.forEach(function (s) {
-    var op = el("option", null, s); op.value = s; sel.appendChild(op);
-  });
   var waNum = C.contato.whatsapp;
   $("orc-whatsapp").href = "https://wa.me/" + waNum;
   $("whatsapp-flutuante").href = "https://wa.me/" + waNum +
@@ -193,35 +188,8 @@
     (C.empresa.certificacao ? '<img class="rodape-selo" src="imagens/selo-iso9001.png" alt="Selo ISO 9001" width="56" height="56" loading="lazy" />' : "") +
     "<span>" + C.rodape.texto + "</span></span>" +
     "<span>" + C.rodape.cnpj + "</span>" +
-    (C.sistema ? '<a class="rodape-sistema" href="' + C.sistema.url + '" rel="noopener">' + C.sistema.texto + "</a>" : "");
-
-  var form = $("orcamento-form");
-  var aviso = $("form-aviso");
-  form.addEventListener("submit", function (e) {
-    e.preventDefault();
-    var nome = $("f-nome").value.trim();
-    var email = $("f-email").value.trim();
-    var tel = $("f-telefone").value.trim();
-    if (!nome || !email || !tel) {
-      aviso.textContent = "Preencha nome, e-mail e telefone.";
-      aviso.className = "form-aviso erro";
-      return;
-    }
-    var corpo =
-      "Nome: " + nome + "\n" +
-      "Empresa: " + $("f-empresa").value + "\n" +
-      "E-mail: " + email + "\n" +
-      "Telefone: " + tel + "\n" +
-      "Cidade/UF: " + $("f-cidade").value + "\n" +
-      "Serviço: " + $("f-servico").value + "\n\n" +
-      "Descrição da obra:\n" + $("f-mensagem").value;
-    aviso.textContent = C.orcamento.mensagemSucesso;
-    aviso.className = "form-aviso ok";
-    window.location.href = "mailto:" + C.contato.email +
-      "?subject=" + encodeURIComponent("Pedido de orçamento - " + nome) +
-      "&body=" + encodeURIComponent(corpo);
-    form.reset();
-  });
+    (C.sistema ? '<a class="rodape-sistema" href="' + C.sistema.url + '" rel="noopener">' + C.sistema.texto + "</a>" : "") +
+    '<a class="rodape-sistema" href="privacidade/">Política de privacidade</a>';
 
   var cab = $("cabecalho");
   var secoes = C.menu.map(function (m) { return document.getElementById(m.id); });

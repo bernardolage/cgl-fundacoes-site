@@ -367,3 +367,111 @@ h2 { font-size: clamp(1.9rem, 3.6vw, 2.8rem); text-transform: uppercase; }
   .logo img { height: 52px; width: 52px; }
   .rodape-marca { flex-direction: column; align-items: flex-start; }
 }
+
+/* ---------- Pedido de orçamento: conversa guiada (fase 195b) ---------- */
+:root { --erro-txt: #A3241B; }
+.orcamento-grid { grid-template-areas: "intro area" "selo area"; align-items: start; }
+.orcamento-intro { grid-area: intro; }
+.orc-area { grid-area: area; min-width: 0; }
+.orc-selo { grid-area: selo; }
+.orc-chat { background: var(--branco); border: 1px solid var(--borda); border-radius: 8px; padding: 24px; }
+.orc-chat-topo { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 12px; }
+.orc-progresso { font-size: .85rem; font-weight: 600; color: var(--java-txt); }
+.orc-log { display: flex; flex-direction: column; gap: 10px; }
+.orc-par { display: flex; flex-direction: column; gap: 6px; }
+.orc-balao { max-width: 92%; padding: 10px 14px; border-radius: 10px; font-size: .95rem; overflow-wrap: anywhere; }
+.orc-balao-cgl { align-self: flex-start; background: var(--claro); color: var(--texto); border-top-left-radius: 2px; }
+.orc-balao-cliente {
+  align-self: flex-end; background: var(--azul); color: var(--branco); border-top-right-radius: 2px;
+  display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px;
+}
+.orc-balao-cliente .orc-alterar { color: var(--branco); }
+.orc-atual { margin-top: 14px; }
+.orc-pergunta { display: flex; flex-direction: column; gap: 12px; }
+.orc-opcoes-chat { display: flex; flex-wrap: wrap; gap: 8px; }
+.orc-btn {
+  min-height: 44px; min-width: 44px; padding: 10px 16px; border-radius: 6px; cursor: pointer;
+  font: inherit; font-size: .95rem; font-weight: 600; text-align: left;
+  background: var(--accent); color: var(--azul); border: 2px solid var(--accent);
+}
+.orc-btn:hover { background: var(--accent-esc); border-color: var(--accent-esc); }
+.orc-btn:focus-visible, .orc-link:focus-visible { outline: 3px solid var(--azul); outline-offset: 2px; }
+.orc-btn:disabled { opacity: .6; cursor: wait; }
+.orc-btn-opcao, .orc-btn-sec { background: var(--branco); color: var(--azul); border-color: var(--java); }
+.orc-btn-opcao:hover, .orc-btn-sec:hover { background: var(--claro); border-color: var(--azul); }
+.orc-btn-opcao[aria-pressed="true"] { background: var(--azul); color: var(--branco); border-color: var(--azul); }
+.orc-btn-enviar { align-self: stretch; text-align: center; }
+.orc-link {
+  background: none; border: 0; padding: 0; min-height: 44px; cursor: pointer; font: inherit; font-size: .88rem;
+  font-weight: 600; color: var(--java-txt); text-decoration: underline;
+}
+.orc-rodape { display: flex; flex-wrap: wrap; gap: 8px; }
+.orc-extra:empty { display: none; }
+.orc-numero input { max-width: 220px; }
+.orc-numero .orc-btn { margin-top: 8px; }
+.orc-erro { color: var(--erro-txt); font-size: .88rem; font-weight: 600; }
+.orc-erro:empty { display: none; }
+.orc-ajuda { display: block; color: var(--texto-suave); font-size: .85rem; margin-top: 4px; }
+.orc-oculto { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.orc-anexo { border: 2px dashed var(--borda); border-radius: 8px; padding: 14px; }
+.orc-anexo-sobre { border-color: var(--java); background: var(--claro); }
+.orc-anexo-rotulo { display: block; font-weight: 700; color: var(--azul); margin-bottom: 6px; }
+.orc-anexo input[type="file"] { max-width: 100%; min-height: 44px; }
+.orc-anexo-conta { font-size: .85rem; color: var(--java-txt); font-weight: 600; margin-top: 6px; }
+.orc-arquivos ul { list-style: none; margin-top: 14px; font-size: .85rem; color: var(--texto-suave); }
+.orc-arquivos li { padding: 2px 0; overflow-wrap: anywhere; }
+.orc-arquivos .orc-arq-erro { color: var(--erro-txt); }
+.orc-arquivos .orc-arq-enviada { color: var(--java-txt); }
+.orc-selo { background: var(--branco); border: 1px solid var(--borda); border-left: 4px solid var(--java); border-radius: 6px; padding: 16px 18px; }
+.orc-selo-titulo { font-size: 1.15rem; margin-bottom: 8px; text-transform: uppercase; }
+.orc-selo-lista { list-style: none; display: flex; flex-direction: column; gap: 6px; font-size: .9rem; }
+.orc-selo-lista li { display: flex; gap: 8px; }
+.orc-selo-marca { flex: 0 0 18px; font-weight: 700; }
+.orc-selo-ok { color: var(--java-txt); }
+.orc-selo-falta { color: var(--texto); }
+.orc-selo-nota { font-size: .82rem; color: var(--texto-suave); margin-top: 10px; }
+.orc-revisao-titulo { font-size: 1.4rem; }
+.orc-revisao-lista { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 6px 16px; font-size: .9rem; }
+.orc-revisao-lista dt { color: var(--texto-suave); }
+.orc-revisao-lista dd { font-weight: 600; overflow-wrap: anywhere; }
+.orc-revisao-selo { background: var(--claro); border-radius: 6px; padding: 12px 14px; display: flex; flex-direction: column; gap: 8px; }
+.orc-selo-sim { font-weight: 700; color: var(--java-txt); }
+.orc-privacidade { font-size: .85rem; color: var(--texto-suave); margin-top: 10px; }
+.orc-privacidade a { color: var(--java-txt); text-decoration: underline; }
+
+/* formulário completo (sem JavaScript ou "Prefiro preencher um formulário") */
+.orc-form-intro { font-size: .9rem; color: var(--texto-suave); margin-bottom: 14px; }
+.orc-grupo { border: 1px solid var(--borda); border-radius: 6px; padding: 12px 14px 4px; margin-bottom: 16px; min-width: 0; }
+.orc-grupo legend { font-size: .9rem; font-weight: 700; color: var(--azul); padding: 0 6px; }
+.orc-quando { font-weight: 400; color: var(--texto-suave); font-size: .82rem; }
+.orc-opcoes { display: flex; flex-direction: column; gap: 2px; margin-bottom: 10px; }
+.orc-opcoes-grade { display: grid; grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); }
+.orc-opcao { display: flex; align-items: center; gap: 8px; min-height: 44px; font-size: .92rem; cursor: pointer; }
+.orc-opcao input { width: 20px; height: 20px; flex-shrink: 0; accent-color: var(--azul); }
+.orc-armadilha { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
+
+/* páginas do pedido (recebido, erro) e privacidade */
+.pagina-simples { max-width: 760px; margin: 0 auto; padding: 48px 24px 72px; }
+.pagina-simples h1 { font-size: clamp(1.9rem, 4vw, 2.6rem); margin-bottom: 18px; }
+.pagina-simples h2 { font-size: 1.4rem; margin: 28px 0 10px; }
+.pagina-simples p, .pagina-simples li { margin-bottom: 10px; }
+.pagina-simples ul { padding-left: 22px; }
+.pagina-simples a { color: var(--java-txt); text-decoration: underline; font-weight: 600; }
+.pagina-simples a.btn { color: var(--azul); text-decoration: none; margin-top: 18px; }
+.cabecalho-simples { background: var(--azul); border-bottom: 3px solid var(--accent); padding: 10px 0; }
+.cabecalho-simples img { height: 56px; width: 56px; }
+.protocolo { font-family: ui-monospace, Consolas, monospace; font-size: 1.3rem; font-weight: 700; color: var(--azul); }
+
+@media (max-width: 900px) {
+  .orcamento-grid { grid-template-areas: "intro" "area" "selo"; }
+}
+@media (max-width: 560px) {
+  .orc-chat { padding: 16px; }
+  .orc-revisao-lista { grid-template-columns: 1fr; gap: 2px; }
+  .orc-revisao-lista dd { margin-bottom: 8px; }
+  .orc-balao { max-width: 100%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .btn, .orc-btn { transition: none; }
+}
